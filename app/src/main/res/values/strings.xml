@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wishlist Tracker</string>
+    <string name="app_subtitle">Keep track of items you want to buy</string>
+
+    <string name="hint_item_name">Item Name</string>
+    <string name="hint_item_price">Price (e.g. 29.99)</string>
+    <string name="hint_item_url">URL / Link (e.g. amazon.com)</string>
+    <string name="add_new_item_title">Add New Wishlist Item</string>
+    <string name="btn_add_item">Add to Wishlist</string>
+
+    <string name="wishlist_header">My Wishlist</string>
+    <string name="total_items">Items: %1$d</string>
+    <string name="total_cost">Total: $%1$.2f</string>
+    <string name="empty_wishlist_title">Your wishlist is empty</string>
+    <string name="empty_wishlist_subtitle">Add items above to start building your wishlist!</string>
+
+    <string name="err_empty_name">Please enter an item name</string>
+    <string name="err_empty_price">Please enter a price</string>
+    <string name="err_invalid_price">Please enter a valid price number</string>
+
+    <string name="dialog_delete_title">Remove Item</string>
+    <string name="dialog_delete_message">Are you sure you want to remove \"%1$s\" from your wishlist?</string>
+    <string name="dialog_delete_confirm">Delete</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="msg_item_added">Added \"%1$s\" to wishlist</string>
+    <string name="msg_item_deleted">Removed \"%1$s\"</string>
+    <string name="msg_undo">Undo</string>
+    <string name="msg_invalid_url">Could not open link. Please check the URL.</string>
+</resources>

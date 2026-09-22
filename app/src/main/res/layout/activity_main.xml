@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wishlist_bg"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Top Header Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/wishlist_primary"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_shopping_bag"
+                        app:tint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_subtitle"
+                            android:textColor="#D1C4E9"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Input Form Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/add_new_item_title"
+                        android:textColor="@color/wishlist_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Item Name Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilItemName"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_item_name"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etItemName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Price Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilItemPrice"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/hint_item_price"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:prefixText="$">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etItemPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Store URL Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilItemUrl"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/hint_item_url"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etItemUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Add Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/wishlist_primary"
+                        android:text="@string/btn_add_item"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Summary Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#EDE7F6"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:id="@+id/tvTotalItems"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/total_items"
+                        android:textColor="@color/wishlist_primary_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="Items: 0" />
+
+                    <TextView
+                        android:id="@+id/tvTotalCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_cost"
+                        android:textColor="@color/price_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="Total: $0.00" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Wishlist Items Section Header -->
+            <TextView
+                android:id="@+id/tvWishlistHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/wishlist_header"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Empty State View -->
+            <LinearLayout
+                android:id="@+id/llEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_empty_box" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/empty_wishlist_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@string/empty_wishlist_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- RecyclerView for Wishlist Items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_wishlist" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

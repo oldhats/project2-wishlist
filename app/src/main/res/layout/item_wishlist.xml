@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Item Name -->
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sony WH-1000XM5 Headphones" />
+
+        <!-- Item Price Badge -->
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_price_chip"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/price_green"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$399.99" />
+
+        <!-- URL Link Container -->
+        <LinearLayout
+            android:id="@+id/llUrlContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_link"
+                app:tint="@color/link_blue" />
+
+            <TextView
+                android:id="@+id/tvItemUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/link_blue"
+                android:textSize="14sp"
+                tools:text="https://www.amazon.com/dp/B09XS7JWHH" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
