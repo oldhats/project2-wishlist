@@ -1,6 +1,6 @@
 # Android Project 2 - Wishlist Tracker
 
-Submitted by: **Student**
+Submitted by: **Marquise Phillips**
 
 **Wishlist Tracker** is a wishlist app that helps the user keep track of what they want to buy.
 
